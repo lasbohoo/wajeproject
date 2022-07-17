@@ -21,7 +21,7 @@ env = environ.Env()
 environ.Env.read_env()
 
 DEBUG = True
-SECRET_KEY = env('SECRET_KEY')
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
