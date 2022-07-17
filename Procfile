@@ -1,2 +1,2 @@
-web: gunicorn wajeproject.wsgi
+web: gunicorn wajeProject.wsgi
 
