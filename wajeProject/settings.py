@@ -20,7 +20,7 @@ env = environ.Env()
 
 environ.Env.read_env()
 
-DEBUG = False
+DEBUG = True
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
