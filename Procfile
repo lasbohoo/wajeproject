@@ -1,1 +1,3 @@
-web gunicorn wajeProject.wsgi:application --log-file -
+
+
+web: gunicorn wajeproject.wsgi:application --log-file - --log-level debug

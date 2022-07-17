@@ -42,7 +42,7 @@ def book_detail(request, pk):
     """
     try:
         book = Book.objects.get(pk=pk)
-        print(book)
+        
     except Book.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
