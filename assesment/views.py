@@ -22,8 +22,7 @@ def bookApi(request):
     """
     if request.method == 'GET':
         books = Book.objects.all()
-        book_serializer = BookSerializer(books)
-        print(book_serializer)
+        book_serializer = BookSerializer(books, many=True)
         return Response(book_serializer.data)
 
     elif request.method == 'POST':
@@ -73,7 +72,7 @@ def authorApi(request):
     """
     if request.method == 'GET':
         author = Author.objects.all()
-        author_serializer = AuthorSerializer(author)
+        author_serializer = AuthorSerializer(author, many=True)
         return Response(author_serializer.data)
 
     elif request.method == 'POST':
