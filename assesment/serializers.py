@@ -20,9 +20,9 @@ class BookSerializer(serializers.ModelSerializer):
 
 
 
-    def create(self, validated_data):
-        author = Author.objects.get(pk=validated_data.pop('author'))
-        book = Book.objects.create(**validated_data)
-        Author.objects.create(book=book, **author)
-        return book
+    # def create(self, validated_data):
+    #     author = Author.objects.get(pk=validated_data.pop('author'))
+    #     book = Book.objects.create(**validated_data)
+    #     Author.objects.create(book=book, **author)
+    #     return book
 

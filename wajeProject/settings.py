@@ -31,7 +31,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-l4x!na9mk74f@@h3%d^zx4weg!g+po%eb&(12h12@a64ph5vh9'
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['wajeproject.herokuapp.com']
 
 
 # Application definition
@@ -108,15 +108,12 @@ WSGI_APPLICATION = 'wajeProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'waje_db',
-        'USER':'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'PORT':'3306',
-        'OPTIONS':{
-            'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':'dbvqi9mslorfea',
+        'USER':'gywehygaruvizq',
+        'PASSWORD':'b4c757509c678f565f7df4d40bf3f17c8de538576c178259982bcbd4f88e2a2a',
+        'HOST':'ec2-52-205-61-230.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
