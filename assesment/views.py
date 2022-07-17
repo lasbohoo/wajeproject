@@ -23,6 +23,7 @@ def bookApi(request):
     if request.method == 'GET':
         books = Book.objects.all()
         book_serializer = BookSerializer(books, many=True)
+        print(book_serializer)
         return Response(book_serializer.data)
 
     elif request.method == 'POST':
