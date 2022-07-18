@@ -30,6 +30,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-l4x!na9mk74f@@h3%d^zx4weg!g+po%eb&(12h12@a64ph5vh9'
 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+
 
 ALLOWED_HOSTS = ['wajeproject.herokuapp.com']
 
@@ -49,7 +52,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 ]
 
-CORS_ORIGIN_WHITELIST = (
+CORS_ORIGIN_ORIGINS = (
     'http://localhost:8000',
     'http://127.0.0.1:8000',
 
@@ -59,6 +62,17 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://127.0.0.1:3000',
 )
+
+
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
     'contenttype',
